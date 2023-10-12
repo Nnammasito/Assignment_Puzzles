@@ -1,101 +1,82 @@
 ﻿
-int[] RandomArray()
+// Matriz Aleatoria
+int[] randomArray = RandomArray();
+Console.WriteLine("Valores en la matriz aleatoria:");
+foreach (int value in randomArray)
 {
-    int[] tempArrayInt = new int[10];
-    Random rand = new Random();
-    for (int i = 0; i < tempArrayInt.Length; i++)
-    {
-        tempArrayInt[i] = rand.Next(5, 25);
-    }
+    Console.Write(value + " ");
+}
+Console.WriteLine("\nValor mínimo: " + randomArray.Min());
+Console.WriteLine("Valor máximo: " + randomArray.Max());
+Console.WriteLine("Suma de los valores: " + randomArray.Sum());
 
-    int minResult = tempArrayInt[0];
-    int maxResult = tempArrayInt[0];
-    int sum = 0;
-    foreach (int number in tempArrayInt)
-    {
-        if (number < minResult)
-        {
-            minResult = number;
-        }
-        if (number > maxResult)
-        {
-            maxResult = number;
-        }
-        sum += number;
-    }
-    Console.WriteLine("Valor minimo : " + minResult + " --- " + "Valor maximo : " + maxResult);
-    Console.WriteLine("Suma total " + sum);
-    return tempArrayInt;
+// Lanzamiento de Moneda
+string coinResult = TossCoin();
+Console.WriteLine(coinResult);
+
+// Lanzamiento de Monedas Múltiples (opcional)
+int numTosses = 10; // Puedes cambiar este valor
+double headToTotalRatio = TossMultipleCoins(numTosses);
+Console.WriteLine("Relación entre lanzamientos de cara y lanzamientos totales: " + headToTotalRatio);
+
+// Nombres
+List<string> names = Nombres();
+Console.WriteLine("Nombres con más de 5 caracteres:");
+foreach (string name in names)
+{
+    Console.WriteLine(name);
 }
 
-String TossCoin()
+// Barajar Nombres (opcional)
+names = names.OrderBy(x => Guid.NewGuid()).ToList();
+Console.WriteLine("\nNombres barajados:");
+foreach (string name in names)
+{
+    Console.WriteLine(name);
+}
+
+// Función para crear una matriz de enteros aleatorios
+static int[] RandomArray()
+{
+    int[] array = new int[10];
+    Random random = new Random();
+
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = random.Next(5, 26);
+    }
+
+    return array;
+}
+
+// Función para lanzar una moneda y devolver el resultado
+static string TossCoin()
 {
     Console.WriteLine("¡Tirando una moneda!");
-    Random rand = new Random();
-    string result;
-    if (rand.Next(0, 2) == 1)
-    {
-        result = "Cruz";
-        Console.WriteLine(result);
-    }
-    else
-    {
-        result = "Cara";
-        Console.WriteLine(result);
-    }
-    return result;
+    Random random = new Random();
+    int result = random.Next(2); // 0 o 1 para representar Cara o Cruz
+    return (result == 0) ? "Cara" : "Cruz";
 }
 
-double TossMultipleCoins(int num)
+// Función para lanzar múltiples monedas y devolver la relación Cara/Todas
+static double TossMultipleCoins(int num)
 {
-    int sumCruz = 0;
+    int headCount = 0;
+
     for (int i = 0; i < num; i++)
     {
-        if (TossCoin() == "Cruz")
+        if (TossCoin() == "Cara")
         {
-            sumCruz++;
+            headCount++;
         }
     }
-    return sumCruz / num;
+
+    return (double)headCount / num;
 }
 
-List<string> Nombres()
+// Función para devolver una lista de nombres con más de 5 caracteres
+static List<string> Nombres()
 {
-    List<string> listaNombre = new List<string>()
-    {
-        "Todd", "Tiffany", "Charlie", "Ginebra", "Sydney"
-    };
-    List<string> listaTemp = new List<string>();
-    foreach (var item in listaNombre)
-    {
-        if (item.Length > 5)
-        {
-            listaTemp.Add(item);
-            Console.WriteLine(item);
-        }
-    }
-
-    //Barajar la lista.
-    Console.WriteLine("\nBaraja la lista\n");
-    Random rand = new Random();
-    for (int i = 0; i < listaTemp.Count; i++)
-    {
-        int posicion1 = rand.Next(0, listaTemp.Count);
-        int posicion2 = rand.Next(0, listaTemp.Count);
-        while (posicion1 == posicion2)
-        {
-            posicion2 = rand.Next(0, listaTemp.Count);
-        }
-        Console.WriteLine(posicion1 + " ---- " + posicion2 + "\n");
-        string tempStore = listaTemp[posicion1];
-        listaTemp[posicion1] = listaTemp[posicion2];
-        listaTemp[posicion2] = tempStore;
-    }
-
-    foreach (var result in listaTemp)
-    {
-        Console.WriteLine(result);
-    }
-
-    return listaTemp;
+    List<string> names = new List<string> { "Todd", "Tiffany", "Charlie", "Ginebra", "Sydney" };
+return names.Where(name => name.Length > 5).ToList();
 }
