@@ -1,0 +1,14 @@
+D:\Aprendiendo a programar\2. C# .NET Coding Dojo\Assignment_Puzzles\bin\Debug\net7.0\Assignment_Puzzles.exe
+D:\Aprendiendo a programar\2. C# .NET Coding Dojo\Assignment_Puzzles\bin\Debug\net7.0\Assignment_Puzzles.deps.json
+D:\Aprendiendo a programar\2. C# .NET Coding Dojo\Assignment_Puzzles\bin\Debug\net7.0\Assignment_Puzzles.runtimeconfig.json
+D:\Aprendiendo a programar\2. C# .NET Coding Dojo\Assignment_Puzzles\bin\Debug\net7.0\Assignment_Puzzles.dll
+D:\Aprendiendo a programar\2. C# .NET Coding Dojo\Assignment_Puzzles\bin\Debug\net7.0\Assignment_Puzzles.pdb
+D:\Aprendiendo a programar\2. C# .NET Coding Dojo\Assignment_Puzzles\obj\Debug\net7.0\Assignment_Puzzles.GeneratedMSBuildEditorConfig.editorconfig
+D:\Aprendiendo a programar\2. C# .NET Coding Dojo\Assignment_Puzzles\obj\Debug\net7.0\Assignment_Puzzles.AssemblyInfoInputs.cache
+D:\Aprendiendo a programar\2. C# .NET Coding Dojo\Assignment_Puzzles\obj\Debug\net7.0\Assignment_Puzzles.AssemblyInfo.cs
+D:\Aprendiendo a programar\2. C# .NET Coding Dojo\Assignment_Puzzles\obj\Debug\net7.0\Assignment_Puzzles.csproj.CoreCompileInputs.cache
+D:\Aprendiendo a programar\2. C# .NET Coding Dojo\Assignment_Puzzles\obj\Debug\net7.0\Assignment_Puzzles.dll
+D:\Aprendiendo a programar\2. C# .NET Coding Dojo\Assignment_Puzzles\obj\Debug\net7.0\refint\Assignment_Puzzles.dll
+D:\Aprendiendo a programar\2. C# .NET Coding Dojo\Assignment_Puzzles\obj\Debug\net7.0\Assignment_Puzzles.pdb
+D:\Aprendiendo a programar\2. C# .NET Coding Dojo\Assignment_Puzzles\obj\Debug\net7.0\Assignment_Puzzles.genruntimeconfig.cache
+D:\Aprendiendo a programar\2. C# .NET Coding Dojo\Assignment_Puzzles\obj\Debug\net7.0\ref\Assignment_Puzzles.dll
